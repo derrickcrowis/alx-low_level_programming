@@ -1,23 +1,28 @@
-#include "main.h"
-/**
- * print_line - a function that draws a straight line in the terminal.
- * followed by a new line.
- * @n: An input integer
- * Return: Always 0
- */
-void print_line(int n)
-{
-	int i = 0;
+#include "holberton.h"
 
-	if (n > 0)
+/**
+ * print_diagonal -  a function that draws a diagonal line on the terminal
+ * @n: input number of times '\' should be printed
+ * Return: a diagonal
+ */
+void print_diagonal(int n)
+{
+	int co, sp;
+
+	if (n <= 0)
 	{
-		for (; i < n; i++)
-			_putchar('_');
-	}
-	_putchar('\n');
-}
-		}
+		_putchar('\n');
 	}
 	else
-		_putchar('\n');
+	{
+		for (co = 1; co <= n; co++)
+		{
+			for (sp = 1; sp < co; sp++)
+			{
+				_putchar(' ');
+			}
+			_putchar('\\');
+			_putchar('\n');
+		}
+	}
 }
