@@ -1,13 +1,24 @@
 #include "main.h"
-#include <string.h>
-void print_rev(char *s) 
-{    
-int len = strlen(s);
-for (int i = len - 1; i >= 0; i--) 
+
+/**
+ * print_rev - prints string backwards
+ * @s: string
+ * Return: void
+ */
+
+void print_rev(char *s)
 {
-putchar(s[i]);
-}
-putchar('\n');
+	int i = 0;
 
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	i--;
+	while (i >= 0)
+	{
+		_putchar(s[i]);
+		i--;
+	}
+	_putchar('\n');
 }
-
